@@ -64,7 +64,6 @@ class GitAccuseCommand extends Command
         $subject = $message;
         $message .= "\r\n\r\nFile: " . $filename . ':' . $linenum;
 
-        $author = 'mradford@noip.com';
         mail ( $author , $subject , $message);
     }
 }
