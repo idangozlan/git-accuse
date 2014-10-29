@@ -6,7 +6,7 @@ Accuse your peers and coworkers of their bad code.
 Installation
 ============
 
-Copy the git-accuse file to a unix recongnized executable path, such as /usr/bin 
+Copy the git-accuse file to a unix recongnized executable path, such as /usr/bin. Then restart your CLI.
 
 Useage
 ======
