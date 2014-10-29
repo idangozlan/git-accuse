@@ -38,20 +38,33 @@ class GitAccuseCommand extends Command
         $linenum = $input->getArgument('linenum');
         $message = $input->getOption('message');
 
-
-
         $command = sprintf(self::GIT_BLAME_COMMAND, $linenum, $linenum, $filename);
 
         $text = exec($command);
 
         $author = $this->parseForAuthor($text);
 
-        $output->writeln('Send accusatory email to ' . $author . ' for ' . $filename . ':' . $linenum);
+        if (! $message) {
+            $messages = include(__DIR__ . '/../../witty-shit-array.php');
+            $message_id = array_rand($messages);
+            $message = $messages[$message_id];
+        }
+
+        $this->sendMail($message, $author, $filename, $linenum);
     }
 
     private function parseForAuthor($line)
     {
         preg_match('/\<(.*)\>/', $line, $matches);
         return $matches[1];
+    }
+
+    private function sendMail($message, $author, $filename, $linenum)
+    {
+        $subject = $message;
+        $message .= "\r\n\r\nFile: " . $filename . ':' . $linenum;
+
+        $author = 'mradford@noip.com';
+        mail ( $author , $subject , $message);
     }
 }
