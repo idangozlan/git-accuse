@@ -1,0 +1,4 @@
+#!/usr/bin/php
+<?
+ echo exec("./bin/git-accuse git:accuse $argv[1] $argv[2]") . "\n";
+?>
