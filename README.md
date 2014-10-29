@@ -12,3 +12,8 @@ Useage
 ======
 
 `git-accuse [filename] [line-number] [--message="Your hate manifest in words"]`
+
+Project
+=======
+
+Follow the project at git-accuse.com
