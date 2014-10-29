@@ -8,7 +8,7 @@ Installation
 
 Copy the git-accuse file to a unix recongnized executable path, such as /usr/bin. Then restart your CLI.
 
-Useage
+Usage
 ======
 
 `git-accuse [filename] [line-number] [--message="Your hate manifest in words"]`
