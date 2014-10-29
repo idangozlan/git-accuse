@@ -1,0 +1,13 @@
+#!/usr/bin/php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use MattyRad\Console\Command\GitAccuseCommand;
+use Symfony\Component\Console\Application;
+
+
+$application = new Application();
+$application->add(new GitAccuseCommand);
+$application->run();
+
