@@ -6,4 +6,4 @@ return array(
         "What were you thinking?",
         "DO YOU WANT LEGACY-BASE?! BECAUSE THAT'S HOW YOU GET LEGACY BASE!",
     )
-)
+);
