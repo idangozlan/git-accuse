@@ -1,3 +1,0 @@
-git blame return text based on a file and line # in a repo
-array of witty or accusatory statements to use, if no witty-statement-param is supplied
-mail the line of code + witty-statement to the git user address
